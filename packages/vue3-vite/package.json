@@ -2,7 +2,7 @@
   "name": "vue3-vite",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
@@ -37,6 +37,7 @@
     "start-server-and-test": "^1.14.0",
     "typescript": "~4.7.4",
     "vite": "^3.0.9",
+    "vite-plugin-qiankun": "^1.0.15",
     "vitest": "^0.23.0",
     "vue-tsc": "^0.40.7"
   }

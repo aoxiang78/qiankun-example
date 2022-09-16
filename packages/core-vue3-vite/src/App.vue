@@ -5,19 +5,20 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">Home</RouterLink> |
+        <RouterLink to="/about">About</RouterLink> |
+        <RouterLink to="/vue2">Vue2</RouterLink> |
+        <RouterLink to="/vue3">Vue3</RouterLink> |
+        <RouterLink to="/vue3-vite">Vue3-vite</RouterLink> |
+        <RouterLink to="/react-umi">React-umi</RouterLink>
       </nav>
     </div>
   </header>
 
   <RouterView />
+  <div id="container" class="sub-app-container" />
 </template>
 
 <style scoped>

@@ -2,7 +2,7 @@
   "name": "core-vue3-vite",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "pinia": "^2.0.21",
+    "qiankun": "^2.7.4",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"
   },
