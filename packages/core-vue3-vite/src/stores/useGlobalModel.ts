@@ -8,15 +8,15 @@ export const useGlobalModel = defineStore("globalModel", () => {
 
   // const doubleCount = computed(() => count.value * 2)
   function setGlobalModel(payload: any) {
-    // @ts-ignore
     Object.keys(payload.value).forEach(
+      // @ts-ignore
       (key) => (globalModel.value[key] = payload.value[key])
     );
   }
 
   function updateGlobalModel(payload: any) {
-    // @ts-ignore
     Object.keys(payload).forEach(
+      // @ts-ignore
       (key) => (globalModel.value[key] = payload[key])
     );
   }
