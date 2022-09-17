@@ -4,6 +4,8 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import { useGlobalModel } from './store/useGlobalModel'
+import { name } from '../package.json'
 
 let instance: any = null
 function render (props: any = {}) {
@@ -16,14 +18,22 @@ if (!window.__POWERED_BY_QIANKUN__) {
   render()
 }
 
-export async function bootstrap () {
-  console.log('[vue] vue app bootstraped')
+export async function bootstrap (props: any) {
+  if (process.env.NODE_ENV === 'development') {
+    console.log(`[${name}] app bootstrap from main framework`, props)
+  }
 }
 export async function mount (props: any) {
-  console.log('[vue] props from main framework', props)
+  if (process.env.NODE_ENV === 'development') {
+    console.log(`[${name}] app mount from main framework`, props)
+  }
+  useGlobalModel(store, props)
   render(props)
 }
-export async function unmount () {
+export async function unmount (props: any) {
+  if (process.env.NODE_ENV === 'development') {
+    console.log(`[${name}] app unmount from main framework`, props)
+  }
   // instance.$destroy()
   instance.$el.innerHTML = ''
   instance = null

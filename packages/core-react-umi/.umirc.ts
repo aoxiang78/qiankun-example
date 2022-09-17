@@ -18,6 +18,10 @@ export default defineConfig({
           component: '@/pages/about'
         },
         {
+          path: '/profile',
+          component: '@/pages/profile'
+        },
+        {
           path: '/vue2',
           microApp: 'vue2',
         },

@@ -19,6 +19,10 @@ export default defineConfig({
           component: '@/pages/about'
         },
         {
+          path: '/profile',
+          component: '@/pages/profile'
+        },
+        {
           component: '@/pages/404',
         },
       ],
