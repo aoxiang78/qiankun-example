@@ -15,7 +15,8 @@ const Header: React.FC<HeaderProps> = () => {
       <Link to="/vue2">Vue2</Link> |
       <Link to="/vue3">Vue3</Link> |
       <Link to="/vue3-vite">Vue3-vite</Link> |
-      <Link to="/react-umi">react-umi</Link>
+      <Link to="/react-umi">react-umi</Link> |
+      <Link to="/react18">react18</Link>
       Signed in as <strong>{globalModel.name}</strong>
     </div>
   )

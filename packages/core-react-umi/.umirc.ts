@@ -38,6 +38,10 @@ export default defineConfig({
           microApp: 'react-umi',
         },
         {
+          path: '/react18',
+          microApp: 'react18',
+        },
+        {
           component: '@/pages/404',
         },
       ],
@@ -66,6 +70,10 @@ export default defineConfig({
         {
           name: 'react-umi',
           entry: process.env.NODE_ENV === 'development' ? '//localhost:8004' : '/modules/react-umi/', // html entry
+        },
+        {
+          name: 'react18',
+          entry: process.env.NODE_ENV === 'development' ? '//localhost:8005' : '/modules/react-umi/', // html entry
         },
       ],
     },

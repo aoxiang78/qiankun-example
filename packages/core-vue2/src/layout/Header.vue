@@ -6,7 +6,8 @@
     <router-link to="/vue2">vue2</router-link> |
     <router-link to="/vue3">vue3</router-link> |
     <router-link to="/vue3-vite">vue3-vite</router-link> |
-    <router-link to="/react-umi">react-umi</router-link>
+    <router-link to="/react-umi">react-umi</router-link> |
+    <router-link to="/react18">react18</router-link>
     Signed in as <strong>{{ $store.state.globalModel.name }}</strong>
   </div>
 </template>

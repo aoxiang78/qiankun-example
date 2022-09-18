@@ -49,6 +49,11 @@ const routes: Array<RouteConfig> = [
     path: '/react-umi/:morePath*',
     name: 'react-umi',
     component: BasicLayout
+  },
+  {
+    path: '/react18/:morePath*',
+    name: 'react18',
+    component: BasicLayout
   }
 ]
 

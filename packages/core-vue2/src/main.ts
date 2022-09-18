@@ -52,6 +52,12 @@ registerMicroApps([
     container: '#container',
     activeRule: '/react-umi',
     props: registerProps
+  },
+  {
+    name: 'react18',
+    entry: process.env.NODE_ENV === 'development' ? '//localhost:8005' : '/modules/react-umi/',
+    container: '#container',
+    activeRule: '/react18'
   }
 ])
 // 启动 qiankun
