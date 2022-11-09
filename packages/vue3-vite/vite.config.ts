@@ -6,7 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import qiankun from 'vite-plugin-qiankun';
 import { name } from './package.json'
 
-const PORT = 8003
+const PORT = 8005
 
 function getBasePath() {
   if(process.env.NODE_ENV === 'development') {

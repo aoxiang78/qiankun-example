@@ -2,7 +2,7 @@ const { name } = require('./package')
 
 function getBasePath () {
   if (process.env.NODE_ENV === 'development') {
-    return '//localhost:8002/'
+    return `//localhost:${process.env.PORT}/`
   }
   if (process.env.NODE_ENV === 'production') {
     return `/modules/${name}/`

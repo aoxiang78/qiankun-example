@@ -56,24 +56,24 @@ export default defineConfig({
       // 注册子应用信息
       apps: [
         {
-          name: 'vue2',
-          entry: process.env.NODE_ENV === 'development' ? '//localhost:8001' : '/modules/vue2/', // html entry
-        },
-        {
-          name: 'vue3',
-          entry: process.env.NODE_ENV === 'development' ? '//localhost:8002' : '/modules/vue3/', // html entry
-        },
-        {
-          name: 'vue3-vite',
-          entry: process.env.NODE_ENV === 'development' ? '//localhost:8003' : '/modules/vue3-vite/', // html entry
-        },
-        {
           name: 'react-umi',
-          entry: process.env.NODE_ENV === 'development' ? '//localhost:8004' : '/modules/react-umi/', // html entry
+          entry: process.env.NODE_ENV === 'development' ? '//localhost:8001' : '/modules/react-umi/', // html entry
         },
         {
           name: 'react18',
-          entry: process.env.NODE_ENV === 'development' ? '//localhost:8005' : '/modules/react-umi/', // html entry
+          entry: process.env.NODE_ENV === 'development' ? '//localhost:8002' : '/modules/react-umi/', // html entry
+        },
+        {
+          name: 'vue2',
+          entry: process.env.NODE_ENV === 'development' ? '//localhost:8003' : '/modules/vue2/', // html entry
+        },
+        {
+          name: 'vue3',
+          entry: process.env.NODE_ENV === 'development' ? '//localhost:8004' : '/modules/vue3/', // html entry
+        },
+        {
+          name: 'vue3-vite',
+          entry: process.env.NODE_ENV === 'development' ? '//localhost:8005' : '/modules/vue3-vite/', // html entry
         },
       ],
     },

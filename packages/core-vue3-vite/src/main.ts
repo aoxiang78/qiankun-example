@@ -25,10 +25,20 @@ const registerProps = {
 
 registerMicroApps([
   {
-    name: "vue2",
+    name: "react-umi",
     entry:
       process.env.NODE_ENV === "development"
         ? "//localhost:8001"
+        : "/modules/react-umi/",
+    container: "#container",
+    activeRule: "/react-umi",
+    props: registerProps,
+  },
+  {
+    name: "vue2",
+    entry:
+      process.env.NODE_ENV === "development"
+        ? "//localhost:8003"
         : "/modules/vue2/",
     container: "#container",
     activeRule: "/vue2",
@@ -38,7 +48,7 @@ registerMicroApps([
     name: "vue3",
     entry:
       process.env.NODE_ENV === "development"
-        ? "//localhost:8002"
+        ? "//localhost:8004"
         : "/modules/vue3/",
     container: "#container",
     activeRule: "/vue3",
@@ -48,20 +58,10 @@ registerMicroApps([
     name: "vue3-vite",
     entry:
       process.env.NODE_ENV === "development"
-        ? "//localhost:8003"
+        ? "//localhost:8005"
         : "/modules/vue3-vite/",
     container: "#container",
     activeRule: "/vue3-vite",
-    props: registerProps,
-  },
-  {
-    name: "react-umi",
-    entry:
-      process.env.NODE_ENV === "development"
-        ? "//localhost:8004"
-        : "/modules/react-umi/",
-    container: "#container",
-    activeRule: "/react-umi",
     props: registerProps,
   },
 ]);
