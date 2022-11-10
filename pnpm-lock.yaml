@@ -45,10 +45,16 @@ importers:
       '@types/node': ^16.18.3
       '@types/react': ^18.0.25
       '@types/react-dom': ^18.0.8
+      '@types/react-router-dom': ^5.3.3
       '@types/testing-library__jest-dom': ^5.14.5
+      fast-deep-equal: ^3.1.3
+      localforage: ^1.10.0
+      match-sorter: ^6.3.1
       react: ^18.2.0
       react-dom: ^18.2.0
+      react-router-dom: ^6.4.3
       react-scripts: 5.0.1
+      sort-by: ^1.2.0
       typescript: ^4.8.4
       web-vitals: ^2.1.4
     dependencies:
@@ -59,12 +65,18 @@ importers:
       '@types/node': 16.18.3
       '@types/react': 18.0.25
       '@types/react-dom': 18.0.8
+      fast-deep-equal: 3.1.3
+      localforage: 1.10.0
+      match-sorter: 6.3.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      react-router-dom: 6.4.3_biqbaboplfbrettd7655fr4n2y
       react-scripts: 5.0.1_uz2ogxeagc4rbieizlfzyaazee
+      sort-by: 1.2.0
       typescript: 4.8.4
       web-vitals: 2.1.4
     devDependencies:
+      '@types/react-router-dom': 5.3.3
       '@types/testing-library__jest-dom': 5.14.5
 
   packages/core-react18-vite:
@@ -3728,7 +3740,7 @@ packages:
     dependencies:
       '@types/history': 5.0.0
       '@types/react': 18.0.25
-      '@types/react-router': 5.1.12
+      '@types/react-router': 5.1.19
 
   /@types/react-router-dom/5.3.3:
     resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
