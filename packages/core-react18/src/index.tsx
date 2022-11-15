@@ -10,6 +10,7 @@ import EditContact, { action as editAction, } from "./routes/edit";
 import { action as destroyAction } from "./routes/destroy";
 import Index from "./routes";
 import Hook from "./routes/hook";
+import MicroApp from "./routes/micro-app";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,26 @@ const router = createBrowserRouter([
           {
             path: "hook",
             element: <Hook/>,
+          },
+          {
+            path: "/react-umi/*",
+            element: <MicroApp/>,
+          },
+          {
+            path: "/react18/*",
+            element: <MicroApp/>,
+          },
+          {
+            path: "/vue2/*",
+            element: <MicroApp/>,
+          },
+          {
+            path: "/vue3/*",
+            element: <MicroApp/>,
+          },
+          {
+            path: "/vue3-vite/*",
+            element: <MicroApp/>,
           },
         ],
       }

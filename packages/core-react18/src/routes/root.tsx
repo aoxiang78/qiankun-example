@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Form, NavLink, Outlet, redirect, useLoaderData, useNavigation, useSubmit, } from "react-router-dom";
 import { ActionFunctionArgs, Contact, createContact, getContacts } from "../contacts";
+import { apps } from "./micro-app";
 
 export async function action() {
   const contact = await createContact();
@@ -68,6 +69,23 @@ export default function Root() {
           </Form>
         </div>
         <nav>
+          <ul>
+            {apps.map((item) => (
+              <li key={item.name}>
+                <NavLink to={`/${item.name}`}
+                         className={({ isActive, isPending }) =>
+                           isActive
+                             ? "active"
+                             : isPending
+                             ? "pending"
+                             : ""
+                         }
+                >
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
           {contacts.length ? (
             <ul>
               {contacts.map((contact: Contact) => (
