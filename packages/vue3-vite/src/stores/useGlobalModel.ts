@@ -7,7 +7,7 @@ const initState = { name: "", email: "" };
 export const useGlobalModel = defineStore("globalModel", () => {
   const globalModel = ref(initState);
   // const doubleCount = computed(() => count.value * 2)
-  function setGlobalModel(payload: any) {
+  function setGlobalModel(payload= {value: {}}) {
     Object.keys(payload.value).forEach(
       // @ts-ignore
       (key) => (globalModel.value[key] = payload.value[key])
@@ -15,7 +15,7 @@ export const useGlobalModel = defineStore("globalModel", () => {
     setSpaGlobalState(JSON.parse(JSON.stringify(globalModel.value)));
   }
 
-  function updateGlobalModel(payload: any) {
+  function updateGlobalModel(payload = {}) {
     Object.keys(payload).forEach(
       // @ts-ignore
       (key) => (globalModel.value[key] = payload[key])

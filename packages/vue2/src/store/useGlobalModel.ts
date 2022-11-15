@@ -4,10 +4,10 @@ const useGlobalModel = (store: any, props: any) => {
   }
 
   // 获取初始化的state
-  const initState = JSON.parse(JSON.stringify(props.spaGlobalState)) || {
+  const initState = JSON.parse(JSON.stringify(props?.spaGlobalState || {
     name: '',
     email: ''
-  }
+  }))
 
   // 将父应用的数据存储到子应用中，命名空间固定为global
   if (!store.hasModule('globalModel')) {
