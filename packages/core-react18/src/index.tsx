@@ -9,8 +9,21 @@ import Contact, { action as contactAction, loader as contactLoader } from "./rou
 import EditContact, { action as editAction, } from "./routes/edit";
 import { action as destroyAction } from "./routes/destroy";
 import Index from "./routes";
-import Hook from "./routes/hook";
+import Hooks from "./routes/hooks";
 import MicroApp from "./routes/micro-app";
+import UseCountDown from "./routes/hooks/UseCountDown";
+import UseCreation from './routes/hooks/UseCreation';
+import UseEventListener from './routes/hooks/UseEventListener';
+import UseHover from './routes/hooks/UseHover';
+import UseInterval from './routes/hooks/UseInterval';
+import UseLatest from './routes/hooks/UseLatest';
+import UsePow from './routes/hooks/UsePow';
+import UseReactive from './routes/hooks/UseReactive';
+import UseTimeout from './routes/hooks/UseTimeout';
+import UseUpdate from './routes/hooks/UseUpdate';
+import UseUnmount from './routes/hooks/UseUnmount';
+import UseMount from './routes/hooks/UseMount';
+import UseMemo from './routes/hooks/UseMemo';
 
 const router = createBrowserRouter([
   {
@@ -45,8 +58,62 @@ const router = createBrowserRouter([
             errorElement: <div>Oops! There was an error.</div>,
           },
           {
-            path: "hook",
-            element: <Hook/>,
+            path: "hooks",
+            element: <Hooks/>,
+            children: [
+              {
+                path: "UseMemo",
+                element: <UseMemo/>,
+              },
+              {
+                path: "useCountDown",
+                element: <UseCountDown/>,
+              },
+              {
+                path: "useCreation",
+                element: <UseCreation/>,
+              },
+              {
+                path: "useEventListener",
+                element: <UseEventListener/>,
+              },
+              {
+                path: "useHover",
+                element: <UseHover/>,
+              },
+              {
+                path: "useInterval",
+                element: <UseInterval/>,
+              },
+              {
+                path: "useLatest",
+                element: <UseLatest/>,
+              },
+              {
+                path: "useMount",
+                element: <UseMount/>,
+              },
+              {
+                path: "usePow",
+                element: <UsePow/>,
+              },
+              {
+                path: "useReactive",
+                element: <UseReactive/>,
+              },
+              {
+                path: "useTimeout",
+                element: <UseTimeout/>,
+              },
+              {
+                path: "useUnmount",
+                element: <UseUnmount/>,
+              },
+              {
+                path: "useUpdate",
+                element: <UseUpdate/>,
+              },
+            ],
           },
           {
             path: "/react-umi/*",
