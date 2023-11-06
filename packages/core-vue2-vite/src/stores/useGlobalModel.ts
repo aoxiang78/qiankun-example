@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 const initState = { name: "", email: "" };
 
 export const useGlobalModel = defineStore("globalModel", {
-  state: () => ({ value: initState}),
+  state: () => ({ value: initState }),
   getters: {
     globalModel: (state) => state.value,
   },

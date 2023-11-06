@@ -56,6 +56,11 @@ const router = createRouter({
 
 // fix 在子应用中切换路由又回退时出现了url自动加上了undefined
 // https://github.com/umijs/qiankun/issues/2254
-router.beforeEach((to, from, next) => { if (isEmpty(history.state.current)) { assign(history.state, { current: from.fullPath }); } next(); })
+router.beforeEach((to, from, next) => {
+  if (isEmpty(history.state.current)) {
+    assign(history.state, { current: from.fullPath });
+  }
+  next();
+});
 
 export default router;

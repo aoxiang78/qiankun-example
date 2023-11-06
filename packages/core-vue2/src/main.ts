@@ -58,7 +58,7 @@ registerMicroApps([
     container: '#container',
     activeRule: '/vue3-vite',
     props: registerProps
-  },
+  }
 ])
 // 启动 qiankun
 start({

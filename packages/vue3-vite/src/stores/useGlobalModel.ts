@@ -7,7 +7,7 @@ const initState = { name: "", email: "" };
 export const useGlobalModel = defineStore("globalModel", () => {
   const globalModel = ref(initState);
   // const doubleCount = computed(() => count.value * 2)
-  function setGlobalModel(payload= {value: {}}) {
+  function setGlobalModel(payload = { value: {} }) {
     Object.keys(payload.value).forEach(
       // @ts-ignore
       (key) => (globalModel.value[key] = payload.value[key])

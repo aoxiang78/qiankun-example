@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { RouterLink } from 'vue-router'
+import { RouterLink } from "vue-router";
 import { useGlobalModel } from "@/stores/useGlobalModel";
 
 const { globalModel } = useGlobalModel();

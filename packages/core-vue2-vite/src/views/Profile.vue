@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Public profile</h1>
-    <UserProfileForm/>
+    <UserProfileForm />
   </div>
 </template>
 
@@ -11,11 +11,11 @@ import UserProfileForm from "../components/UserProfileForm.vue";
 import { useGlobalModel } from "../stores/useGlobalModel";
 
 export default {
-  components:{
+  components: {
     UserProfileForm,
   },
   computed: {
-    ...mapState(useGlobalModel, ['globalModel'])
+    ...mapState(useGlobalModel, ["globalModel"]),
   },
 };
 </script>

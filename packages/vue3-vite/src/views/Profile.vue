@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useGlobalModel } from "@/stores/useGlobalModel";
-import UserProfileForm from "@/components/UserProfileForm.vue"
+import UserProfileForm from "@/components/UserProfileForm.vue";
 
 const { globalModel } = useGlobalModel();
 </script>

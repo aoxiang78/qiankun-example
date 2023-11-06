@@ -18,7 +18,7 @@ import { useGlobalModel } from "../stores/useGlobalModel";
 
 export default {
   computed: {
-    ...mapState(useGlobalModel, ['globalModel'])
+    ...mapState(useGlobalModel, ["globalModel"]),
   },
 };
 </script>
