@@ -76,6 +76,8 @@ export default defineConfig({
           entry: process.env.NODE_ENV === 'development' ? '//localhost:8005' : '/modules/vue3-vite/', // html entry
         },
       ],
+      sandbox: true, // 是否启用 js 沙箱，默认为 false
+      prefetch: 'all', // 是否启用 prefetch 特性，默认为 true
     },
   },
 });
