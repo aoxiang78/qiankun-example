@@ -1,4 +1,8 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  RouteLocationNormalized,
+} from 'vue-router';
 import BasicLayout from "../layout/BasicLayout.vue";
 import HomeView from "../views/HomeView.vue";
 import { isEmpty, assign } from "lodash-es";
@@ -56,7 +60,7 @@ const router = createRouter({
 
 // fix 在子应用中切换路由又回退时出现了url自动加上了undefined
 // https://github.com/umijs/qiankun/issues/2254
-router.beforeEach((to, from, next) => {
+router.beforeEach((_to: RouteLocationNormalized, from: RouteLocationNormalized, next: Function) => {
   if (isEmpty(history.state.current)) {
     assign(history.state, { current: from.fullPath });
   }
